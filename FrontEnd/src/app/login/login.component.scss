@@ -1,0 +1,73 @@
+.header{
+    // width: 100vw; 
+    // overflow: hidden;
+}
+
+:host {
+    display: flex;
+    justify-content: center;
+    // margin: 100px 0px;
+}
+
+.mat-form-field {
+    width: 100%;
+    min-width: 300px;
+}
+
+mat-card-title,
+mat-card-content {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.icon-button {
+    background: transparent;
+    border: none;
+    color: #87CEFA;
+}
+
+.error {
+    padding: 16px;
+    width: 300px;
+    color: white;
+    background-color: red;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+}
+
+.new-user{
+    font-size: 10px;
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+}
+
+.button-new-user{
+    color: aliceblue;
+    text-decoration: none;
+    color: #87CEFA;
+    font-weight: 600;
+}
+
+.button-login{
+    width: 100%;
+    height: 40px;
+    background-color: #87CEFA;
+    border: #87CEFA;
+    color: white;
+}
+
+.margin{
+    border: 2px solid;
+}
+
+@media screen and (max-width: 992px) {
+    .header{
+        width: 100vw; 
+        overflow: hidden;
+    }
+}
