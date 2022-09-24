@@ -31,7 +31,7 @@ mongoose
     `mongodb+srv://${DB_USER}:${DB_PASSWORD}@apiprojeto.sfrfqfh.mongodb.net/?retryWrites=true&w=majority`
    )
    .then(() => {
-    console.log('Conextado ao mongoDB')
+    console.log('Conectado ao mongoDB')
     app.listen(3000)
    })
    .catch((err) => console.log(err))
