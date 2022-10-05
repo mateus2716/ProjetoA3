@@ -1,34 +1,27 @@
 const express = require('express');
 const mongoose = require('mongoose');
+
 const app = express()
 
-
-app.use(
-    express.urlencoded({
-        extended: true,
-    }),
-)
-
+// Config JSON response
 app.use(express.json())
 
 // rotas da API
-const personRoutes = require('./routes/personRoutes')
+const userRoute = require('./routes/userRoute')
 
-app.use('/person', personRoutes)
+app.use('/users', userRoute)
 
+// Open Route
+app.get("/", (req, res) => {
+    res.status(200).json({ msg: "Bem vindo a API!" });
+});
 
-app.get('/', (req, res) => {
-
-
-    res.json({message: 'Oi express!'})
-})
-
-const DB_USER = 'yohanapinheiro'
-const DB_PASSWORD = encodeURIComponent('123456SaoJudas')
+const dbUser     = process.env.DB_USER
+const dbPassWord = process.env.DB_PASSWORD
 
 mongoose
   .connect(
-    `mongodb+srv://${DB_USER}:${DB_PASSWORD}@apiprojeto.sfrfqfh.mongodb.net/?retryWrites=true&w=majority`
+    `mongodb+srv://${dbUser}:${dbPassWord}@apiprojeto.sfrfqfh.mongodb.net/?retryWrites=true&w=majority`
    )
    .then(() => {
     console.log('Conectado ao mongoDB')
