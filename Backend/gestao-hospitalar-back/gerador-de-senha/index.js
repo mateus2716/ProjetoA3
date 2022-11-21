@@ -18,6 +18,7 @@ app.get('/senhas',(req, res) => {
     res.send(senhas);
 });
 
+//post
 app.post('/senhas', async (req, res) => {
     
     contadorId++;       
